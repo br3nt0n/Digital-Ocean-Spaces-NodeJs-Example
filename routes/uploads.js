@@ -6,12 +6,15 @@ const upload = multer({ storage: storage });
 const AWS = require('aws-sdk');
 
 let space = new AWS.S3({
+  //Get the endpoint from the DO website for your space
   endpoint: "sfo2.digitaloceanspaces.com",
   useAccelerateEndpoint: false,
-  credentials: new AWS.Credentials("SZSQ5MI3G4WMAVZDSD5B", "Z1hbIxGwQLWf2wL/WMJ6mUgAbZYYfznB+P1DKHA7qMM", null)
+  //Create a credential using DO Spaces API key (https://cloud.digitalocean.com/account/api/tokens)
+  credentials: new AWS.Credentials("YOUR-KEY-ID-HERE", "YOUR-SECRET-HERE", null)
 });
 
-const BucketName = "test-sharing";
+//Name of your bucket here
+const BucketName = "YOUR-BUCKET-NAME-HERE";
 
 /* Upload file */
 router.post('/upload', upload.single('image'), function(req, res, next) {
