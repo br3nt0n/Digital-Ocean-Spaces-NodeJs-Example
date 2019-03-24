@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5bd80a36-21c9-49f3-b9e2-9cf4b2813025",
+		"_postman_id": "d3b8a1eb-190e-4ce4-8464-8bff105a1165",
 		"name": "Node JS Demo",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -73,20 +73,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:3000/uploads/upload?file_name=example_image",
+					"raw": "localhost:3000/uploads/example_image",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"uploads",
-						"upload"
-					],
-					"query": [
-						{
-							"key": "file_name",
-							"value": "example_image"
-						}
+						"example_image"
 					]
 				}
 			},
